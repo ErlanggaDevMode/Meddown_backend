@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: meddown-api
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    envVars:
+      - key: PORT
+        value: "8000"
+      - key: MEDDOWN_API_TOKEN
+        sync: false  # set manually in dashboard
